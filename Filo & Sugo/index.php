@@ -12,6 +12,12 @@
         <?php } ?>
     </select>
 
+    <label for="size">Serving size</label>
+    <select id="size" name="size">
+        <?php foreach ($servings as $key => $serving) { ?>
+            <option value="<?php echo $key; ?>"><?php echo $serving[0] . ' - serves ' . $serving[1]; ?></option>
+        <?php } ?>
+    </select>
 
     <label for="quantity">Number of sets</label>
     <select id="quantity" name="quantity">
@@ -20,10 +26,15 @@
         <?php } ?>
     </select>
 
+    <label for="service">Dining option</label>
+    <select id="service" name="service">
+        <option value="dinein">Dine-in</option>
+        <option value="takeaway">Takeaway</option>
+    </select>
 
     <label for="budget">Budget for the whole table (PHP)</label>
     <input id="budget" name="budget" type="number" min="0" step="0.01" required>
     <button type="submit">Plan my table</button>
 </form>
-
+<p>Takeaway packaging is PHP 15 per set, for any serving size.</p>
 <?php include 'footer.php'; ?>
