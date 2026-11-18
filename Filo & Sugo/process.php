@@ -14,7 +14,11 @@ if (!$valid) {
     $price = $pastas[$product][1];
     $orderName = $pastas[$product][0];
     $tasting = false;
-
+    if ($second !== 'none') {
+        $price = ($price + $pastas[$second][1]) / 2;
+        $orderName .= ' + ' . $pastas[$second][0];
+        $tasting = true;
+    }
     $sets = $quantity;
     $budget = round($budget, 2);
     $serviceName = $service === 'takeaway' ? 'Takeaway' : 'Dine-in';

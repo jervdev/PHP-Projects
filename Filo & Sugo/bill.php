@@ -1,7 +1,7 @@
 <?php
 echo '<h2>Your pasta table</h2>';
 echo '<p>Customer: ' . htmlspecialchars($name, ENT_QUOTES, 'UTF-8') . '</p>';
-
+if ($tasting) { echo '<p><strong>Assaggio Duo - half of each recipe</strong></p>'; }
 echo '<p>' . htmlspecialchars($orderName) . '</p>';
 $setLabel = $quantity == 1 ? 'set' : 'sets';
 $guestLabel = $bill['Guests'] == 1 ? 'guest' : 'guests';

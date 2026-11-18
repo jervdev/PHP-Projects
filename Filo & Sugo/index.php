@@ -1,12 +1,19 @@
 <?php require 'header.php'; ?>
 <?php include 'menu.php'; ?>
-
+<p class="tasting"><strong>Assaggio Duo</strong><br>Try two recipes in one half-and-half serving. Choose a different second pasta. The price is the average of the two dishes.</p>
 <h2>Build your pasta table</h2>
 <form method="POST" action="process.php">
     <label for="customer_name">Name</label>
     <input id="customer_name" name="customer_name" type="text" required>
     <label for="product">First pasta</label>
     <select id="product" name="product">
+        <?php foreach ($pastas as $code => $pasta) { ?>
+            <option value="<?php echo $code; ?>"><?php echo htmlspecialchars($pasta[0]); ?></option>
+        <?php } ?>
+    </select>
+    <label for="second">Assaggio Duo: second pasta (optional)</label>
+    <select id="second" name="second">
+        <option value="none">No second pasta</option>
         <?php foreach ($pastas as $code => $pasta) { ?>
             <option value="<?php echo $code; ?>"><?php echo htmlspecialchars($pasta[0]); ?></option>
         <?php } ?>
