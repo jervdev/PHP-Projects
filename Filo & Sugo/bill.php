@@ -15,7 +15,9 @@ echo '</table>';
 if ($bill['Savings'] > 0) {
     echo '<p class="success">Sharing saves PHP ' . number_format($bill['Savings'], 2) . ' compared with individual Piatto servings.</p>';
 }
-
+echo '<h3>Split the table</h3>';
+echo '<p>Average cost per guest: PHP ' . number_format($bill['Per guest'], 2) . '</p>';
+echo '<p>Budget per guest: PHP ' . number_format($budget / $bill['Guests'], 2) . '</p>';
 echo '<p>Table budget: PHP ' . number_format($budget, 2) . '</p>';
 if ($budget > $bill['Total']) {
     echo '<p class="success">Budget left: PHP ' . number_format($budget - $bill['Total'], 2) . '</p>';
