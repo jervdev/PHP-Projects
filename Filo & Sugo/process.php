@@ -25,7 +25,7 @@ if (!$valid) {
     require 'calculate.php';
     $bill = $calculation;
     include 'bill.php';
-
+    include 'guide.php';
 }
 echo '<p><a href="index.php">Plan another table</a></p>';
 include 'footer.php';
