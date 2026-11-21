@@ -1,4 +1,5 @@
 <?php require 'header.php'; ?>
+<p><a href="functions.php">Check pasta stock</a></p>
 <?php include 'menu.php'; ?>
 <p class="tasting"><strong>Assaggio Duo</strong><br>Try two recipes in one half-and-half serving. Choose a different second pasta. The price is the average of the two dishes.</p>
 <h2>Build your pasta table</h2>
